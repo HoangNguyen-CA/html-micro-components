@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  --main-color: lightcoral;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  letter-spacing: 3px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  background-color: var(--main-color);
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.burger div {
+  transition: 0.5s;
+  margin: 5px;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    overflow: hidden;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--main-color);
+    margin-top: 10vh;
+    height: 90vh;
+    width: 40vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+  }
+
+  .nav-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    filter: grayscale(100%) opacity(0.8);
+    transition: 0.3s;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background-color: #333;
+    color: var(--main-color);
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li:last-child {
+    margin-top: auto;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+}
+@media only screen and (min-width: 600px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50vw;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .burger {
+    display: none;
+  }
+}
