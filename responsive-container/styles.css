@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 170ch;
+  min-width: 45ch;
+  padding: 1rem;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.col {
+  width: 100%;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.desc {
+  margin-top: 1em;
+  font-size: 1.1rem;
+  line-height: 130%;
+}
+
+@media only screen and (min-width: 800px) {
+  .columns {
+    flex-direction: row;
+    width: 100%;
+  }
+  .col {
+    width: 32%;
+  }
+}
