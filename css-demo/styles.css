@@ -1,0 +1,47 @@
+html {
+  background-color: snow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  color: darkgoldenrod;
+  font-size: 50px;
+  display: inline-block;
+  transform: rotate(50deg);
+}
+
+button {
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: lightgreen;
+}
+
+#signup {
+  background-color: purple;
+  color: snow;
+}
+
+span.tag {
+  font-style: italic;
+  color: grey;
+  font-size: 20px;
+}
+
+.post button {
+  font-size: 15px;
+  text-decoration: line-through;
+}
+
+.post h2 {
+  font-size: 30px;
+}
+
+.post h2:hover {
+  color: red;
+}
+
+p::first-line {
+  color: rebeccapurple;
+}
